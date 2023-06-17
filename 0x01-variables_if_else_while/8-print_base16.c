@@ -1,21 +1,22 @@
 #include <stdio.h>
 /**
- * main - alphabet
+ * main - digit
  *
  * Return:Always 0 (Success)
  */
 
 int main(void)
 {
-char c;
+int i;
 
-for (c = 'a'; c <= 'z'; c++)
+for (i = 48; i <= 57; i++)
 {
-if (c != 'e' && c != 'q')
-{
-  putchar(c);
+putchar(i);
 }
-} 
+for (i = 'a'; i <= 'f'; i++)
+{
+putchar(i);
+}
 putchar('\n');
 return (0);
 }
