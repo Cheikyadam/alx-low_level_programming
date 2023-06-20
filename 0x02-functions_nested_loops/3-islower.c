@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- *_islower - determine casse
- *@parameterc: first parameter
+ * _islower - determine casse
+ * @x: the caracter to be checked
  *
- *section header : including main.h
- *Return: int 0 or 1
+ * section header : including main.h
+ * Return: 0 or 1
  */
 
 int _islower(int c)
