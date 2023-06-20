@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_islower - determine casse
- *@parameter c: first parameter
+ *@parameterc: first parameter
  *
  *section header : including main.h
  *Return: int 0 or 1
