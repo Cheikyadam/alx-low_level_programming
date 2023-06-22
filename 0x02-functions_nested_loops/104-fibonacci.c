@@ -8,21 +8,22 @@
 
 int main(void)
 {
-int a = 1;
-int b = 2;
-int i;
-int c;
+long int a = 1;
+long int b = 2;
+int cpt = 2;
+long int c;
 
 printf("1, ");
 printf("2, ");
-for (i = 3; i <= 50; i++)
+while (cpt != 99)
 {
 c = a + b;
-printf("%d", a + b);
+printf("%ld", c);
 a = b;
 b = c;
-if (i != 50)
+if (cpt != 98)
 printf(", ");
+cpt++;
 }
 printf("\n");
 return (0);
