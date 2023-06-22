@@ -1,17 +1,18 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * _isupper - to know if is upper
+ * _isdigit - to know if is upper
  * @c: the caracter to check
  *
  * Return: 1 or 0
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
-if (isupper(c))
+char r;
+for (r = 48; r <= 57; r++)
+if (r == c)
 return (1);
-else
+
 return (0);
 }

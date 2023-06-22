@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
  * _isupper - to know if is upper
@@ -10,8 +9,10 @@
 
 int _isupper(int c)
 {
-if (isupper(c))
+char r;
+for (r = 'A'; r <= 'Z'; r++)
+if (r == c)
 return (1);
-else
+
 return (0);
 }
