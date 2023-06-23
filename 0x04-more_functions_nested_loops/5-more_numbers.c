@@ -10,17 +10,23 @@ void more_numbers(void)
 {
 char r;
 int i;
+int c;
 
 for (i = 0; i <= 9; i++)
 {
-for (r = 48; r <= 57; r++)
+c = 48;
+for (r = 48; r <= 62; r++)
 {
-_putchar(r);
-}
-for (r = 48; r <= 52; r++)
+if (r >= 58)
 {
 _putchar(49);
-_putchar(r);
+}
+if (r == 58)
+{
+c = 48;
+}
+_putchar(c);
+c++;
 }
 _putchar('\n');
 }
