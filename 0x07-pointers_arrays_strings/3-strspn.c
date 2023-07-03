@@ -15,8 +15,9 @@ unsigned int _strspn(char *s, char *accept)
 	int i;
 
 	while (*p != '\0')
-	{	
-		for (i = 0; s[i] != ',' && s[i] != ';' && s[i] != '!' && s[i] != '?' && s[i] != '.'; i++)
+	{
+		for (i = 0; s[i] != ',' && s[i] != ';' &&
+		s[i] != '!' && s[i] != '?' && s[i] != '.'; i++)
 		{
 			if (s[i] == *p)
 				n++;
