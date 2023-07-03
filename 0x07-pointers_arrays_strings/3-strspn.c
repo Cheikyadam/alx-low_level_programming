@@ -10,5 +10,18 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-        return (n);
+	int n = 0;
+	char *p = accept;
+	int i;
+
+	while (*p != '\0')
+	{	
+		for (i = 0; s[i] != ',' && s[i] != ';' && s[i] != '!' && s[i] != '?' && s[i] != '.'; i++)
+		{
+			if (s[i] == *p)
+				n++;
+		}
+		p++;
+	}
+	return (n);
 }
