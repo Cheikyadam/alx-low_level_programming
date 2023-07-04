@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strstr - searching a substring 
+ * _strstr - searching a substring
  * @haystack: the string
  * @needle: the substring
  *
- * Return: char * 
+ * Return: char *
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -25,8 +25,8 @@ char *_strstr(char *haystack, char *needle)
 				tmp++;
 			}
 			if (*q == '\0')
-				return p;
+				return (p);
 		}
 	}
-	return '\0';
+	return ('\0');
 }
