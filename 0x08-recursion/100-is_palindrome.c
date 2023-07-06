@@ -10,20 +10,13 @@
 
 int is_palindrome(char *s)
 {
-	char *p;
+	char *p = s;
 
 	if (*s == '\0')
 		return (1);
-	for (p = s; *p != '\0'; p++)
-	{
-		;
-	}
-	p--;
-	if (*s == *p)
-	{
-		*p = '\0';
-		s++;
-		is_palindrome(s);
-	}
-	return (0);
+	s++;
+	is_palindrome(s);
+
+	if (*p != *s)
+		return (0);
 }
