@@ -8,13 +8,14 @@
  */
 
 void helper(char *s)
-{
-	if (*s != '\0')
+{	
+	if (*s == '\0')
+		;
+	else
 	{
 		s++;
 		helper(s);
 		_putchar(*s);
-		s--;
 	}
 }
 
@@ -29,5 +30,4 @@ void helper(char *s)
 void _print_rev_recursion(char *s)
 {
 	helper(s);
-	_putchar('\n');
 }
