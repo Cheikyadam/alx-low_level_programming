@@ -15,6 +15,10 @@ void helper(char *s)
 	{
 		s++;
 		helper(s);
+		/*if (*s == '\\' && *(s + 1) == 'n')
+			_putchar('\n');
+		else
+			_putchar(*s);*/
 		_putchar(*s);
 	}
 }
@@ -29,5 +33,8 @@ void helper(char *s)
 
 void _print_rev_recursion(char *s)
 {
+	char *p = s;
+	
 	helper(s);
+	_putchar(*p);
 }
