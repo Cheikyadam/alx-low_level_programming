@@ -12,8 +12,6 @@ int lenght(char *s)
 {
 	int i;
 
-	if (s == NULL)
-		return (0);
 	for (i = 0; s[i] != '\0'; i++)
 		;
 	return (i);
@@ -33,7 +31,9 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 
-	new = malloc(sizeof(char) * (lenght(s1) + lenght(s2)));
+	if ( s1 == NULL && s2 == NULL)
+		return (NULL);
+	new = malloc(sizeof(char) * (lenght(s1) + 1 + lenght(s2)));
 	if (new != NULL)
 	{
 		if (s2 == NULL)
