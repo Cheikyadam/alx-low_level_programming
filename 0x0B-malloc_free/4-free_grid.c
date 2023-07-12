@@ -3,7 +3,8 @@
 
 /**
  * free_grid - allocation grid
- * @width: the width of the grid
+ * @height: the width of the grid
+ * @grid: the grid
  *
  * Return: nothing
  */
