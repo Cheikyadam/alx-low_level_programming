@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - concatenation
  * @s1: first string
@@ -9,7 +8,6 @@
  *
  * Return: char *
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
@@ -36,20 +34,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			return (NULL);
 		i = 0;
 		if (s1 != NULL)
-		{
 			for ( ; s1[i] != '\0'; i++)
-			{
 				new[i] = s1[i];
-			}
-		}
 		if (s2 != NULL)
-		{
 			for (j = 0; s2[j] != '\0' && j < n; j++)
 			{
 				new[i] = s2[j];
 				i++;
 			}
-		}
+		new[i] = '\0';
 	}
 	return (new);
 }
