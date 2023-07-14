@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * print_er - printing error
  *
@@ -20,10 +21,10 @@ void print_er(void)
  *
  * Return: an integer
  */
-unsigned long int _atoi(char *s)
+unsigned int _atoi(char *s)
 {
-	unsigned long int i;
-	unsigned long int nb = 0;
+	unsigned int i;
+	unsigned int nb = 0;
 
 	for (i = 0 ; s[i] != '\0'; i++)
 		nb = (nb * 10) + (s[i] - 48);
@@ -37,11 +38,11 @@ unsigned long int _atoi(char *s)
  * Return: void
  */
 
-void print_number(unsigned long int n)
+void print_number(unsigned int n)
 {
-	unsigned long int i;
-	unsigned long int cpt = 0;
-	unsigned long int mul = 10;
+	unsigned int i;
+	unsigned int cpt = 0;
+	unsigned int mul = 10;
 
 
 	while (n % mul != n)
@@ -70,10 +71,10 @@ void print_number(unsigned long int n)
 
 int main(int argc, char **argv)
 {
-	unsigned long int num1;
-	unsigned long int num2;
-	unsigned long int i;
-	unsigned long int p;
+	unsigned int num1;
+	unsigned int num2;
+	unsigned int i;
+	unsigned int p;
 
 	if (argc != 3)
 	{
