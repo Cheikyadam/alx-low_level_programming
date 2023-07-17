@@ -18,8 +18,10 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	d->name = malloc(sizeof(name));
 	for (i = 0; name[i] != '\0'; i++)
 		d->name[i] = name[i];
+	d->name[i] = '\0';
 	d->owner = malloc(sizeof(owner));
 	for (i = 0; owner[i] != '\0'; i++)
 		d->owner[i] = owner[i];
+	d->owner[i] = '\0';
 	d->age = age;
 }
