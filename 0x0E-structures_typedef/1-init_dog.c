@@ -15,25 +15,31 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	int i;
 
-	for (i = 0; name[i] != '\0'; i++)
-		;
-	i++;
-	d->name = malloc(i);
-	if (d->name != NULL)
+	if (name != NULL)
 	{
 		for (i = 0; name[i] != '\0'; i++)
-			d->name[i] = name[i];
-		d->name[i] = '\0';
+			;
+		i++;
+		d->name = malloc(i);
+		if (d->name != NULL)
+		{
+			for (i = 0; name[i] != '\0'; i++)
+				d->name[i] = name[i];
+			d->name[i] = '\0';
+		}
 	}
-	for (i = 0; owner[i] != '\0'; i++)
-		;
-	i++;
-	d->owner = malloc(i));
-	if (d->owner != NULL)
+	if (owner != NULL)
 	{
 		for (i = 0; owner[i] != '\0'; i++)
-			d->owner[i] = owner[i];
-		d->owner[i] = '\0';
+			;
+		i++;
+		d->owner = malloc(i);
+		if (d->owner != NULL)
+		{
+			for (i = 0; owner[i] != '\0'; i++)
+				d->owner[i] = owner[i];
+			d->owner[i] = '\0';
+		}
 	}
 	d->age = age;
 }
