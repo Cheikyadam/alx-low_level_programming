@@ -27,7 +27,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - addtion
+ * op_mul - multiplication
  * @a: first number
  * @b: 2nd number
  *
