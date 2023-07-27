@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * add_node - adding a node at the beginning 
+ * add_node - adding a node at the beginning
  * @head: the list
  * @str: the new node
  *
