@@ -3,27 +3,20 @@
 #include <stdlib.h>
 
 /**
- * add_node - adding a node at the beginning
+ * add_nodeint - adding a node at the beginning
  * @head: the list
- * @str: the new node
+ * @n: the new node
  *
  * Return: the list
  */
 
-list_t *add_node(list_t **head, const char *str)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	list_t *new = malloc(sizeof(list_t));
+	listint_t *new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 		return (NULL);
-	new->str = malloc(sizeof(strlen(str)));
-	if (new->str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->str = strdup(str);
-	new->len = strlen(str);
+	new->n = n;
 	if (head == NULL)
 	{
 		*head = new;
