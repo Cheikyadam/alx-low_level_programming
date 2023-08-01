@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * list_len - printing lists
+ * listint_len - printing lists
  * @h: the list
  *
  * Return: Size of the list
  */
 
-size_t list_len(const list_t *h)
+size_t listint_len(const listint_t *h)
 {
 	size_t size = 0;
 
