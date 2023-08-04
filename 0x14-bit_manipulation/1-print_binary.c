@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 	{
 		while (tmp != 0)
 		{
-			tmp = tmp >> 1;
+			tmp >>= 1;
 			nb_bit++;
 		}
 
@@ -31,7 +31,7 @@ void print_binary(unsigned long int n)
 				_putchar(49);
 			else
 				_putchar(48);
-			m = m >> 1;
+			m  >>= 1;
 		}
 	}
 }
