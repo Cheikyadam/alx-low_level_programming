@@ -3,7 +3,7 @@
 /**
  * read_textfile - reading a text file
  * @filename: the name of the file
- * @ letters: the numbers of letters
+ * @letters: the numbers of letters
  *
  * Return: the size
  */
@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = fopen(filename, "r");
 	if (fd == NULL)
 		return (0);
-	n = write(0, fd, letters);
+	n = write(1, fd, letters);
 	fclose(fd);
 	if (n == -1)
 		return (0);
