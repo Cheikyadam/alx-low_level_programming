@@ -31,7 +31,10 @@ int main(int argc, char **argv)
 	ssize_t n, n2;
 
 	if (argc != 3)
-		exit_f("Usage: cp file_from file_to", " ", 97);
+	{
+		dprintf(2, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	from = open(argv[1], O_RDONLY);
 	if (from == -1)
 		exit_f("Error: Can't read from file ", argv[1], 98);
