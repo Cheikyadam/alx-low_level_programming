@@ -14,23 +14,26 @@ int _atoi(char *s)
 	int nb = 0;
 	int cpt = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (s != NULL)
 	{
-		if (s[i] == '-')
-			cpt++;
-		if (s[i] >= 48 && s[i] <= 57)
+		for (i = 0; s[i] != '\0'; i++)
 		{
-			j = i;
-			while (s[j] >= 48 && s[j] <= 57)
+			if (s[i] == '-')
+				cpt++;
+			if (s[i] >= 48 && s[i] <= 57)
 			{
-				nb = nb * 10;
-				nb = nb + (s[j] - 48);
-				j++;
+				j = i;
+				while (s[j] >= 48 && s[j] <= 57)
+				{
+					nb = nb * 10;
+					nb = nb + (s[j] - 48);
+					j++;
+				}
+				break;
 			}
-			break;
 		}
+		if ((cpt % 2) != 0)
+			nb = -nb;
 	}
-	if ((cpt % 2) != 0)
-		nb = -nb;
 	return (nb);
 }
