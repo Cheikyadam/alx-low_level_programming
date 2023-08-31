@@ -9,29 +9,25 @@
 
 void print_binary(unsigned long int n)
 {
-	int nb_bit = 0;
-	unsigned long int tmp = n;
-	int h_bit;
+	int bits = sizeof(unsigned long int) * 8;
+	int leadingZeroes = 1;
+	int i;
 
-	if (n == 0)
-		_putchar(48);
-	else
+	for (i = bits - 1; i >= 0; i--)
 	{
-		while ((tmp) != 0)
+		if ((n >> i) & 1)
 		{
-			(tmp) >>= 1;
-			nb_bit++;
+			leadingZeroes = 0;
+			_putchar('1');
 		}
-
-		h_bit = 1 << (nb_bit - 1);
-
-		while (h_bit != 0)
+		else if (!leadingZeroes)
 		{
-			if ((n) & h_bit)
-				_putchar(49);
-			else
-				_putchar(48);
-			h_bit  >>= 1;
+			_putchar('0');
 		}
+	}
+
+	if (leadingZeroes)
+	{
+		_putchar(48);
 	}
 }
