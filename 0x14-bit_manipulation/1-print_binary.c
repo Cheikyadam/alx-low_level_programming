@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	unsigned int h_bit = 1;
 
 	if (n == 0)
-		_putchar(48);
+		_putchar('0');
 	else
 	{
 		while ((tmp) != 0)
@@ -28,9 +28,9 @@ void print_binary(unsigned long int n)
 		while (h_bit != 0)
 		{
 			if ((n) & h_bit)
-				_putchar(49);
+				_putchar('1');
 			else
-				_putchar(48);
+				_putchar('0');
 			h_bit  >>= 1;
 		}
 	}
