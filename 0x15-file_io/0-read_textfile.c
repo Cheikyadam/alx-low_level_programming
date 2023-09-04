@@ -52,15 +52,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	n = read(fd, buffer, buf);
 	if (n == -1)
 	{
+		free(buffer);
 		close(fd);
 		return (0);
 	}
 	n = write(1, buffer, buf);
 	if (n == -1)
 	{
+		free(buffer);
 		close(fd);
 		return (0);
 	}
+	free(buffer);
 	close(fd);
 	return (n);
 }
