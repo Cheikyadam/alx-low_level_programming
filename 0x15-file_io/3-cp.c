@@ -13,7 +13,7 @@
 
 void exit_f(char *s, char *f, int n)
 {
-	dprintf(2, "%s%s\n", s, f);
+	dprintf(STDERR_FILENO, "%s%s\n", s, f);
 	exit(n);
 }
 
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	from = open(argv[1], O_RDONLY);
@@ -52,12 +52,12 @@ int main(int argc, char **argv)
 		exit_f("Error: Can't read from file ", argv[1], 98);
 	if (close(to) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
 		exit(100);
 	}
 	if (close(from) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
 		exit(100);
 	}
 	return (0);
