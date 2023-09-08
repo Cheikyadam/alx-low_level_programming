@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strstr - searching a substring
@@ -14,6 +15,8 @@ char *_strstr(char *haystack, char *needle)
 	char *q = needle;
 	char *tmp;
 
+	if (needle[0] == '\0')
+		return (haystack);
 	for (p = haystack; *p != '\0'; p++)
 	{
 		if (*p == *q)
@@ -26,6 +29,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			if (*q == '\0')
 				return (p);
+			q = needle;
 		}
 	}
 	return ('\0');
