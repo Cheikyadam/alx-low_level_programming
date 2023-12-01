@@ -32,6 +32,7 @@ typedef struct hash_table_s
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int _strcmp(const char *s1, const char *s2);
 char *_strdup(const char *s);

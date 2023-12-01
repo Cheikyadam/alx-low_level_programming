@@ -108,8 +108,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || key[0] == '\0' || value == NULL)
 		return (0);
-	value_dup = _strdup(value);
-	key_dup = _strdup(key);
+	value_dup = strdup(value);
+	key_dup = strdup(key);
 	if (value_dup == NULL || key == NULL)
 		return (0);
 
@@ -126,7 +126,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = new;
 	else
 	{
-		if (_strcmp(current->key, key) == 0)
+		if (strcmp(current->key, key) == 0)
 			current->value = value_dup;
 		else
 		{
