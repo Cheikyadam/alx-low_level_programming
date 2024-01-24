@@ -1,29 +1,41 @@
 #!/usr/bin/python3
 """My island code here"""
 
+
 def island_perimeter(grid):
     """Island perimeter"""
 
-    number_1 = number_1_grid(grid)
-    if number_1 == 0:
-        return 0
-    elif number_1 == 1:
-        return 4
-    else:
-        p = 4
-        for i in range(1, number_1):
-            p = p + 2
-        return p
-
-
-def number_1_grid(grid):
-    """find number of 1 in the grid"""
-
     if grid is None or len(grid) == 0:
         return 0
-    count = 0
+
     for row in grid:
-        for elt in row:
-            if elt == 1:
-                count += 1
-    return count
+        width = len(row)
+        break
+    height = 0
+    for row in grid:
+        height += 1
+    p = 0
+    for i in range(0, height):
+        for j in range(0, width):
+            if grid[i][j] == 1:
+                if (j-1) < 0:
+                    p += 1
+                else:
+                    if grid[i][j-1] == 0:
+                        p += 1
+                if (j+1) >= width:
+                    p += 1
+                else:
+                    if grid[i][j+1] == 0:
+                        p += 1
+                if (i-1) < 0:
+                    p += 1
+                else:
+                    if grid[i-1][j] == 0:
+                        p += 1
+                if (i+1) >= height:
+                    p += 1
+                else:
+                    if grid[i+1][j] == 0:
+                        p += 1
+    return p
