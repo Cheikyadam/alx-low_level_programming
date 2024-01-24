@@ -1,4 +1,5 @@
 all:school
+
 school:main.o school.o
 	gcc main.o school.o 
 
@@ -7,3 +8,6 @@ school.o:school.c
 
 main.o:main.c
 	gcc -c main.c
+
+clean:
+	rm -rf *.o
